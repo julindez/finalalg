@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Quiz Completo 15 Preguntas</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    color: #333;
+  }
+  .pregunta {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+  }
+  .correcta {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+  }
+  .incorrecta {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+  }
+  .sin-respuesta {
+    background-color: #fff3cd !important;
+    border-color: #ffeeba !important;
+  }
+  .respuesta-correcta-texto {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #c3e6cb;
+    color: #155724;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  button:hover {
+    background-color: #005fa3;
+  }
+  #resultado {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <h1>Quiz Completo – Tema 1: Estructuras Dinámicas y Lineales</h1>
+
+  <form id="quiz">
+  
+    <div class="pregunta" data-correcta="c">
+      <p>1. ¿Cuál es la característica principal de una estructura estática de datos?</p>
+      <label><input type="radio" name="q1" value="c"> Ocupa una sola casilla de memoria y no cambia de tamaño</label><br>
+      <label><input type="radio" name="q1" value="a"> Puede cambiar de tamaño durante la ejecución</label><br>
+      <label><input type="radio" name="q1" value="b"> Ocupa múltiples casillas de memoria</label><br>
+      <label><input type="radio" name="q1" value="d"> Siempre es más rápida que una estructura dinámica</label>
+    </div>
+
+    <div class="pregunta" data-correcta="c">
+      <p>2. ¿Cuál de los siguientes es un tipo de dato simple en C?</p>
+      <label><input type="radio" name="q2" value="c"> Entero</label><br>
+      <label><input type="radio" name="q2" value="a"> Árbol</label><br>
+      <label><input type="radio" name="q2" value="b"> Lista enlazada</label><br>
+      <label><input type="radio" name="q2" value="d"> Grafo</label>
+    </div>
+
+    <div class="pregunta" data-correcta="c">
+      <p>3. ¿Cuál de estas estructuras es lineal?</p>
+      <label><input type="radio" name="q3" value="c"> Pila</label><br>
+      <label><input type="radio" name="q3" value="a"> Árbol</label><br>
+      <label><input type="radio" name="q3" value="b"> Grafo</label><br>
+      <label><input type="radio" name="q3" value="d"> Ninguna de las anteriores</label>
+    </div>
+
+    <div class="pregunta" data-correcta="d">
+      <p>4. ¿Qué estructura sigue el principio LIFO?</p>
+      <label><input type="radio" name="q4" value="d"> Pila</label><br>
+      <label><input type="radio" name="q4" value="c"> Árbol</label><br>
+      <label><input type="radio" name="q4" value="a"> Cola</label><br>
+      <label><input type="radio" name="q4" value="b"> Lista</label>
+    </div>
+
+    <div class="pregunta" data-correcta="d">
+      <p>5. En una pila, ¿dónde se inserta un nuevo nodo?</p>
+      <label><input type="radio" name="q5" value="d"> Siempre al inicio</label><br>
+      <label><input type="radio" name="q5" value="a"> En el centro</label><br>
+      <label><input type="radio" name="q5" value="b"> En el nodo raíz</label><br>
+      <label><input type="radio" name="q5" value="c"> Siempre al final</label>
+    </div>
+
+    <div class="pregunta" data-correcta="c">
+      <p>6. ¿Cuál es la función del puntero “siguiente” en una lista enlazada?</p>
+      <label><input type="radio" name="q6" value="c"> Permitir el acceso al siguiente nodo</label><br>
+      <label><input type="radio" name="q6" value="a"> Apuntar al nodo anterior</label><br>
+      <label><input type="radio" name="q6" value="b"> Eliminar nodos</label><br>
+      <label><input type="radio" name="q6" value="d"> Inicializar la lista</label>
+    </div>
+
+    <div class="pregunta" data-correcta="b">
+      <p>7. ¿Cómo se llama la operación que elimina el último elemento agregado en una pila?</p>
+      <label><input type="radio" name="q7" value="b"> pop</label><br>
+      <label><input type="radio" name="q7" value="a"> push</label><br>
+      <label><input type="radio" name="q7" value="c"> top</label><br>
+      <label><input type="radio" name="q7" value="d"> peek</label>
+    </div>
+
+    <div class="pregunta" data-correcta="c">
+      <p>8. ¿Cuál de estas estructuras sigue el principio FIFO?</p>
+      <label><input type="radio" name="q8" value="c"> Cola</label><br>
+      <label><input type="radio" name="q8" value="a"> Lista enlazada doble</label><br>
+      <label><input type="radio" name="q8" value="b"> Árbol</label><br>
+      <label><input type="radio" name="q8" value="d"> Pila</label>
+    </div>
+
+    <div class="pregunta" data-correcta="b">
+      <p>9. ¿Qué es una lista enlazada?</p>
+      <label><input type="radio" name="q9" value="a"> Un arreglo estático</label><br>
+      <label><input type="radio" name="q9" value="b"> Una secuencia de nodos con referencias al siguiente</label><br>
+      <label><input type="radio" name="q9" value="c"> Un árbol binario</label><br>
+      <label><input type="radio" name="q9" value="d"> Una pila</label>
+    </div>
+
+    <div class="pregunta" data-correcta="a">
+      <p>10. ¿Qué significa LIFO?</p>
+      <label><input type="radio" name="q10" value="a"> Last In First Out (Último en entrar, primero en salir)</label><br>
+      <label><input type="radio" name="q10" value="b"> Last In Final Out</label><br>
+      <label><input type="radio" name="q10" value="c"> List In File Out</label><br>
+      <label><input type="radio" name="q10" value="d"> None of the above</label>
+    </div>
+
+    <div class="pregunta" data-correcta="a">
+      <p>11. ¿Cuál es el principio que sigue una cola?</p>
+      <label><input type="radio" name="q11" value="a"> FIFO (First In First Out)</label><br>
+      <label><input type="radio" name="q11" value="b"> LIFO</label><br>
+      <label><input type="radio" name="q11" value="c"> FILO</label><br>
+      <label><input type="radio" name="q11" value="d"> LILO</label>
+    </div>
+
+    <div class="pregunta" data-correcta="b">
+      <p>12. ¿Qué función realiza la operación “push” en una pila?</p>
+      <label><input type="radio" name="q12" value="a"> Eliminar el último nodo</label><br>
+      <label><input type="radio" name="q12" value="b"> Insertar un nuevo nodo</label><br>
+      <label><input type="radio" name="q12" value="c"> Mostrar el nodo superior</label><br>
+      <label><input type="radio" name="q12" value="d"> Inicializar la pila</label>
+    </div>
+
+    <div class="pregunta" data-correcta="b">
+      <p>13. ¿Qué estructura no es lineal?</p>
+      <label><input type="radio" name="q13" value="a"> Pila</label><br>
+      <label><input type="radio" name="q13" value="b"> Árbol</label><br>
+      <label><input type="radio" name="q13" value="c"> Cola</label><br>
+      <label><input type="radio" name="q13" value="d"> Lista enlazada</label>
+    </div>
+
+    <div class="pregunta" data-correcta="c">
+      <p>14. ¿Qué puntero en una lista enlazada apunta al siguiente nodo?</p>
+      <label><input type="radio" name="q14" value="a"> puntero anterior</label><br>
+      <label><input type="radio" name="q14" value="b"> puntero raíz</label><br>
+      <label><input type="radio" name="q14" value="c"> puntero siguiente</label><br>
+      <label><input type="radio" name="q14" value="d"> puntero final</label>
+    </div>
+
+    <div class="pregunta" data-correcta="a">
+      <p>15. ¿Qué es un nodo en una estructura de datos?</p>
+      <label><input type="radio" name="q15" value="a"> Un elemento que contiene datos y referencias</label><br>
+      <label><input type="radio" name="q15" value="b"> Un tipo de variable simple</label><br>
+      <label><input type="radio" name="q15" value="c"> Un algoritmo</label><br>
+      <label><input type="radio" name="q15" value="d"> Un lenguaje de programación</label>
+    </div>
+
+    <button type="button" onclick="corregir()">Corregir</button>
+    <button type="button" onclick="resetear()">Resetear</button>
+    <div id="resultado"></div>
+  </form>
+
+<script>
+  function corregir() {
+    const preguntas = document.querySelectorAll('.pregunta');
+    let correctas = 0;
+    let total = preguntas.length;
+
+    preguntas.forEach(preg => {
+      preg.classList.remove('correcta', 'incorrecta', 'sin-respuesta');
+      const correcta = preg.dataset.correcta;
+      const opciones = preg.querySelectorAll('input[type="radio"]');
+      let seleccionada = null;
+      opciones.forEach(op => { if(op.checked) seleccionada = op.value; });
+
+      // Limpiar respuesta correcta anterior
+      const etiquetaCorrecta = preg.querySelector('.respuesta-correcta-texto');
+      if (etiquetaCorrecta) etiquetaCorrecta.remove();
+
+      if (seleccionada === null) {
+        preg.classList.add('sin-respuesta');
+      } else if (seleccionada === correcta) {
+        preg.classList.add('correcta');
+        correctas++;
+      } else {
+        preg.classList.add('incorrecta');
+        // Mostrar cuál es la respuesta correcta
+        const divCorrecta = document.createElement('div');
+        divCorrecta.className = 'respuesta-correcta-texto';
+        divCorrecta.textContent = `Respuesta correcta: ${correcta.toUpperCase()}`;
+        preg.appendChild(divCorrecta);
+      }
+    });
+
+    // Guardar resultado en localStorage
+    localStorage.setItem('ultimoPuntaje', `${correctas} de ${total}`);
+
+    document.getElementById('resultado').textContent = `Obtuviste ${correctas} de ${total} correctas.`;
+  }
+
+  function resetear() {
+    const preguntas = document.querySelectorAll('.pregunta');
+    preguntas.forEach(preg => {
+      preg.classList.remove('correcta', 'incorrecta', 'sin-respuesta');
+      const opciones = preg.querySelectorAll('input[type="radio"]');
+      opciones.forEach(op => op.checked = false);
+      const etiquetaCorrecta = preg.querySelector('.respuesta-correcta-texto');
+      if (etiquetaCorrecta) etiquetaCorrecta.remove();
+    });
+    document.getElementById('resultado').textContent = '';
+
+    // Limpiar localStorage
+    localStorage.removeItem('ultimoPuntaje');
+  }
+
+  // Mostrar último puntaje guardado al cargar la página
+  window.onload = function() {
+    const puntaje = localStorage.getItem('ultimoPuntaje');
+    if (puntaje) {
+      document.getElementById('resultado').textContent = `Último resultado: ${puntaje}`;
+    }
+  }
+</script>
+
+</body>
+</html>
